@@ -3,9 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
 		"build": "next build",
-		"build:cf": "npm run build && npx @cloudflare/next-on-pages@1"
+		"export": "next export"
 	  },
 	"dependencies": {
 		"@cloudflare/kv-asset-handler": "^0.4.0",
