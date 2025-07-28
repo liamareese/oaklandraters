@@ -1,23 +1,11 @@
-name = "oaklandraters" # Required: A unique name for your Worker
+name = "oakland-raters"
+compatibility_date = "2025-07-27"
+main = "src/worker.js" # The entrypoint for our Worker code
 
-main = "./open-next/worker.js" # Required: The entry-point file for your Worker
-                               # This path is where OpenNext puts the generated worker.js
-
-compatibility_date = "2024-01-01" # Required: A date string (YYYY-MM-DD) that locks in
-                                  # the Worker's behavior to a specific runtime version.
-                                  # Always set this to the current or a recent date to
-                                  # ensure consistent behavior. Newer dates enable new features.
-
-compatibility_flags = ["nodejs_compat"] # Recommended for Next.js:
-                                         # This flag enables Node.js API compatibility
-                                         # within your Worker, which Next.js often relies on.
-
-# Optional: If your Next.js app serves static assets that should be
-# directly served by Cloudflare Pages/Workers Sites (highly recommended for performance).
-# The 'bucket' should point to the directory where OpenNext puts your static assets.
-# The 'binding' is the name your Worker uses to access these assets (e.g., env.ASSETS).
+# This section tells Wrangler how to handle static assets
 [site]
-bucket = "./.open-next/assets"
-entry-point = "./open-next/worker.js" # This is often redundant if `main` is set,
-                                      # but historically used for Workers Sites.
-                                      # OpenNext's Cloudflare adapter typically handles this.
+bucket = "./dist" # The directory of static files from your build
+
+# This section tells Wrangler how to build your assets
+[build]
+command = "npm run build"
