@@ -2,7 +2,6 @@
 	"name": "oaklandraters",
 	"version": "0.1.0",
 	"private": true,
-// package.json
 "scripts": {
 	"build": "next build"
   },
