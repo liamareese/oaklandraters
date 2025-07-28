@@ -4,16 +4,12 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"build": "opennextjs-cloudflare build",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
-	},
+		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+	  },
 	"dependencies": {
 		"@cloudflare/kv-asset-handler": "^0.4.0",
-		"@opennextjs/cloudflare": "^1.5.2",
 		"next": "14.2.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
@@ -21,12 +17,13 @@
 	"devDependencies": {
 		"@cloudflare/next-on-pages": "^1.13.12",
 		"@eslint/eslintrc": "^3",
+		"@opennextjs/cloudflare": "^1.6.1",
 		"@types/node": "^20.19.9",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "14.2.5",
 		"typescript": "^5",
-		"wrangler": "^4.25.0"
+		"wrangler": "^4.26.0"
 	}
 }
