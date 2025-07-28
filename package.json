@@ -12,10 +12,11 @@
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
 	},
 	"dependencies": {
+		"@cloudflare/kv-asset-handler": "^0.4.0",
 		"@opennextjs/cloudflare": "^1.5.2",
-		"next": "14.2.5",    
-		"react": "^18.2.0",  
-		"react-dom": "^18.2.0" 
+		"next": "14.2.5",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@cloudflare/next-on-pages": "^1.13.12",
