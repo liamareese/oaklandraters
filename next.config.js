@@ -1,8 +1,6 @@
-// next.config.js
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <-- Add this line
+  distDir: 'dist',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
