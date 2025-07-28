@@ -4,9 +4,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "opennextjs-cloudflare build",
-		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+		"build": "next build",
+		"build:cf": "opennextjs-cloudflare build",
+		"deploy": "npm run build:cf && wrangler deploy .open-next/worker.js"
 	  },
 	"dependencies": {
 		"@cloudflare/kv-asset-handler": "^0.4.0",
