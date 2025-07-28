@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"build:cf": "npm run build && opennextjs-cloudflare build",
+		"build:cf": "opennextjs-cloudflare build",
 		"deploy": "npm run build:cf && wrangler deploy .open-next/worker.js"
 	  },
 	"dependencies": {
