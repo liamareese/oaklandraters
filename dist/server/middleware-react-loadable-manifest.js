@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/page.tsx -> ../data/restaurants.json":{"id":7736,"files":["static/chunks/736.8fd8c32c68b7a441.js"]}}';

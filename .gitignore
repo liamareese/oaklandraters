@@ -1,17 +1,32 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Dependencies
 /node_modules
+/.pnp
+.pnp.js
 
-# Next.js build output
+# Testing
+/coverage
+
+# Next.js
 /.next/
 /out/
 
-# OpenNext build output
-.open-next
+# Production
+/build
 
-# Production build folder (if you use a custom one)
-/dist
-
-# Other
+# Misc
 .DS_Store
 *.pem
-*.log
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local Env Files
+.env*.local
+
+# Custom Additions from our troubleshooting
+/dist
+.dev.vars
