@@ -1,0 +1,11 @@
+name = "oakland-raters"
+compatibility_date = "2025-07-27"
+main = "src/worker.js" # The entrypoint for our Worker code
+
+# This section tells Wrangler how to handle static assets
+[site]
+bucket = "./dist" # The directory of static files from your build
+
+# This section tells Wrangler how to build your assets
+[build]
+command = "npm run build"
