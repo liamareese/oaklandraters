@@ -1,5 +1,7 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',          // tell Next.js to do a static export
+  experimental: { appDir: true },
 };
+
 module.exports = nextConfig;
